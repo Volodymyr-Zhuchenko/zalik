@@ -4,12 +4,24 @@ def search_word():
     number_abzath = 1
     my_word = input("Введіть слово яке шукаєте: ")
     answer = []
+    list_letters= [",", "."]
     for line in text:
         stroka = line[:-1]
+        stroka1 = ""
+        
+        for element in stroka:
+            if list_letters.count(element) == 1:
+                continue
+            else:
+                stroka1 += element
+
+                
+                
+            
         if line == "\n":
             number_abzath += 1
         else:
-            list_word = stroka.split(" ")
+            list_word = stroka1.split(" ")
             for word in list_word:
                 if word.lower() == my_word.lower():
                     if answer.count(number_abzath) == 0:
