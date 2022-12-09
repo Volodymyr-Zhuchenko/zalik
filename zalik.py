@@ -36,6 +36,28 @@ def search_word():
         print("Такого слова немає у тесті")
     else:
         print(f"Це слово є у абзаці: {abzath}")
+    number_abzath_2 = 1
+    
+    for line in text:
+        stroka = line[:-1]
+        stroka1 = ""
+        
+        for element in stroka:
+            if list_letters.count(element) == 1:
+                continue
+            else:
+                stroka1 += element
+        
+        if line == "\n":
+            number_abzath_2 += 1
+
+        if answer.count(number_abzath_2) == 1:
+            print(line)    
+
+
+
+
+               
         
 
 
