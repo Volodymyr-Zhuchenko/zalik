@@ -11,7 +11,7 @@ def search_word():
         else:
             list_word = stroka.split(" ")
             for word in list_word:
-                if word == my_word:
+                if word.lower() == my_word.lower():
                     if answer.count(number_abzath) == 0:
                         answer.append(number_abzath)
             
